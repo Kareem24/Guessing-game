@@ -5,6 +5,7 @@ const message = document.querySelector('.message')
 const score = document.querySelector('.score-number')
 const highScore = document.querySelector('.highscore-number')
 const check = document.querySelector('.check')
+const main = document.querySelector('.main')
 let mysteryDigit = Math.trunc(Math.random() * 20 + 1);
 let scoreDigit = 20
 let highScoreDigit = 0
@@ -15,6 +16,7 @@ const checkInput = () => {
     if (inputNumber === mysteryDigit) {
         showMsg(message, 'correct!')
         showMsg(mysteryNumber, mysteryDigit)
+        main.classList.add('win')
         if (scoreDigit > highScoreDigit) {
             highScoreDigit = scoreDigit
             showMsg(highScore, highScoreDigit)
@@ -29,11 +31,11 @@ const checkInput = () => {
         message.textContent = inputNumber > mysteryDigit ? 'too high' : 'too low';
 
     } else {
-        showMsg('input number between(1 - 20)')
+        showMsg(message, 'input number between(1 - 20)')
     }
     scoreDigit--
     if (scoreDigit < 1) {
-        showMsg('game over')
+        showMsg(message, 'game over')
         check.removeEventListener('click', checkInput)
         scoreDigit = 0
     }
@@ -43,6 +45,7 @@ const checkInput = () => {
 const resetGame = () => {
     check.addEventListener('click', checkInput)
     mysteryDigit = Math.trunc(Math.random() * 20 + 1);
+    main.classList.remove('win')
     showMsg(mysteryNumber, '?')
     input.value = ''
     showMsg(message, 'Start Guessing...')

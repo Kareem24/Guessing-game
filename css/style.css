@@ -72,3 +72,6 @@ span {
 	font-size: 1.2rem;
 	color: var(--black);
 }
+.win {
+	background: green;
+}
