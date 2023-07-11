@@ -26,7 +26,8 @@
 p,
 span {
 	text-transform: capitalize;
-	font-size: 1.45rem;
+	font-size: 1.3rem;
+	white-space: nowrap;
 }
 .main .header {
 	width: 80%;
