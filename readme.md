@@ -14,7 +14,7 @@ correctly. If the player does not guess the number correctly in 20 tries, they l
 
 ## instructions
 
-1. open the game here
+1. open the game [here](https://kareem24.github.io/Guessing-game/)
 2. enter a guess between 1 and 20
 3. click the "check!" button
 4. the game will tell whether your guess is 'too high' ,'too low' or 'correct!'
