@@ -24,6 +24,9 @@
 	background: #fff;
 	border-radius: 8px;
 }
+.title {
+	line-height: 1.5;
+}
 .btn,
 p,
 span {
